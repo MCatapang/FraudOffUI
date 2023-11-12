@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
 import { UserAuthForm } from "@/components/user-auth-form"
+import { useState } from 'react'
+import RandomQuote from '@/components/ui/random-quote'
 
 export default function Page() {
   return (
@@ -27,14 +27,7 @@ export default function Page() {
         <div className="relative hidden min-h-screen flex-col bg-muted p-10 text-white dark:border-r lg:flex">
           <div className="absolute inset-0 bg-zinc-900" />
           <div className="relative z-20 mt-auto">
-            <blockquote className="space-y-2">
-              <p className="text-lg">
-                &ldquo;This library has saved me countless hours of work and
-                helped me deliver stunning designs to my clients faster than
-                ever before.&rdquo;
-              </p>
-              <footer className="text-sm">Sofia Davis</footer>
-            </blockquote>
+            <RandomQuote/>
           </div>
         </div>
         <div className="lg:p-8">

@@ -7,6 +7,7 @@ import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { motion } from "framer-motion"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -23,6 +24,11 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   }
 
   return (
+    <motion.div 
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.50 }}
+    >
     <div className={cn("grid gap-6", className)} {...props}>
       <form onSubmit={onSubmit}>
         <div className="grid gap-2">
@@ -67,5 +73,6 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         Github
       </Button>
     </div>
+    </motion.div>
   )
 }

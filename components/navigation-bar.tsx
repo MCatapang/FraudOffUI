@@ -30,46 +30,46 @@ export default function NavigationBar() {
       href: "/docs#is-it-licensed"
     },
     {
-      title: "Github",
-      description: "Explore the source code behind this project.",
-      href: "https://github.com/MCatapang/FraudOffUI"
+      title: "API",
+      description: "Programmatically interact with our solution in your own apps.",
+      href: "/docs#api"
     },
   ]
 
   return (
-    <NavigationMenu>
-      <Link href="/">
-        <Image
-          src="/fraudofflogo.png"
-          alt="FraudOff Logo"
-          width={40}
-          height={24}
-          priority
-        />
-      </Link>
-
-      <NavigationMenuList className="justify-end">
+    <NavigationMenu className="z-20 justify-between">
+      <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/authentication/log-in" legacyBehavior passHref>
+          <NavigationMenuLink href="/">
+            <Image
+              className="pointer-events-none"
+              src="/fraudofflogo.png"
+              alt="FraudOff Logo"
+              width={40}
+              height={40}
+              priority
+            />
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem className="flex justify-center items-center font-bold text-lg">
+          <NavigationMenuLink href="/">
+            <h1 className="select-none text-transparent bg-clip-text bg-gradient-to-l from-pink-500 to-purple-500">FraudOff</h1>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <Link href="/authentication" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Log-In
+              Get Started
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link href="/authentication/register" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Register
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        
         <NavigationMenuItem>
           <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <li className="group row-span-3">
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -77,7 +77,7 @@ export default function NavigationBar() {
                     target="_blank"
                     >
                     <Icons.logo className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="transition group-hover:text-accent-foreground mb-2 mt-4 text-lg font-medium">
                       Docs
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
@@ -95,7 +95,6 @@ export default function NavigationBar() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
         <ModeToggle/>
       </NavigationMenuList>
     </NavigationMenu>

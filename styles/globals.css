@@ -25,8 +25,8 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 330 50% 90%;
+    --accent-foreground: 330 60% 50%;
 
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
@@ -44,7 +44,7 @@
     --muted-foreground: 215.4 16.3% 56.9%;
 
     --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 330 60% 50%;
 
     --popover: 224 71% 4%;
     --popover-foreground: 215 20.2% 65.1%;
@@ -79,3 +79,9 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+/* 
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+} */
