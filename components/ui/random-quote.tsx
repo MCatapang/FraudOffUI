@@ -1,9 +1,9 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default function RandomQuote() {
-  const quotes: {content:string, author: string}[] = [
+  const quotes = useMemo(() => [
     {
       content: "You may not control all the events that happen to you, but you can decide not to be reduced by them.",
       author: "Maya Angelou",
@@ -20,15 +20,14 @@ export default function RandomQuote() {
       content: "Torture the data, and it will confess to everything.",
       author: "Ronald Coase",
     },
-  ]
+  ], []);
 
   const [quote, setQuote] = useState(quotes[0])
-  const pickRandomItem = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
-  }
 
-  useEffect(() => setQuote(pickRandomItem()), []);
+  useEffect(() => { 
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    setQuote(quotes[randomIndex]); 
+  }, [quotes])
 
   return (
     <blockquote className="space-y-2">

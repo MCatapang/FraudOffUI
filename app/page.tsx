@@ -4,10 +4,10 @@ import MainBanner from '@/components/main-banner'
 
 export default function Home() {
   return (
-    <main className="transition flex min-h-screen px-24 pt-24 pb-12 flex-col items-center justify-between p-24">
+    <main className="transition flex min-h-screen px-4 pt-24 pb-8 flex-col items-center justify-between">
       <ItemCarousel/>
       <MainBanner/>
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="grid text-center lg:max-w-6xl lg:w-full lg:mb-0 grid-cols-2 lg:grid-cols-4 lg:text-left">
         <LinkCard 
           href='https://google.com'
           title='Google'
