@@ -6,7 +6,7 @@ export default function MainBanner() {
         <span className='text-transparent group-hover: bg-clip-text bg-gradient-to-r from-blue-400 to-red-600 dark:invert group-hover:invert group-hover:dark:invert-0 transition duration-700'>
           malicious actors 
         </span>
-        . Learn how you can tell them to&nbsp;
+        . Make sure you can tell them to&nbsp;
         <div className="font-extrabold">
           &quot;
           <a className='text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500'>F</a>

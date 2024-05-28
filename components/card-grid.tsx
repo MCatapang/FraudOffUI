@@ -26,8 +26,9 @@ export default function CardGrid() {
 
   return (
     <div className="grid text-center lg:max-w-6xl lg:w-full lg:mb-0 grid-cols-2 lg:grid-cols-4 lg:text-left">
-      {cards.map(c => 
+      {cards.map((c, i) => 
         <LinkCard
+          key={i}
           href={c.href}
           title={c.title}
           description={c.description}
