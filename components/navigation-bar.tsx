@@ -95,7 +95,9 @@ export default function NavigationBar() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <ModeToggle/>
+        <NavigationMenuItem>
+          <ModeToggle/>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   )

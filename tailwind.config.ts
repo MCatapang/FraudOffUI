@@ -18,6 +18,10 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "background-dark": "url('/background-dark.webp')",
+        "background-light": "url('/background-light.webp')",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
